@@ -60,10 +60,12 @@ public class GroceryDAO {
         Connection connection = ConnectionUtil.getConnection();
         try {
             //Write SQL logic here
+            //                         table    column name      variable
             String sql = "INSERT INTO Grocery (grocery_name) VALUES (?)";
             PreparedStatement ps = connection.prepareStatement(sql);
 
             //add code that leverages ps.setString here
+            //            index of first? |  variable
             ps.setString(1, groceryName);
 
             ps.executeUpdate();
